@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Romance</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="text/javascript">
+    function toggleDetails(id) {
+        const details = document.getElementById(id);
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    }
+</script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+        <img src="../Média/Image/logo.jpeg" alt="logo" width="100">
+        
+
+        <ul class="nav-buttons">
+                    <li><button onclick="window.location.href='Accueil.html'">Accueil</button></li>
+                    <li><button onclick="window.location.href='Bibliotheque.html'">Bibliothèque</button></li>
+                    <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
+                    <li><button onclick="window.location.href='A propos.html'">A propos</button></li>
+        </ul>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Romance</h1>
+        </div>
+    </section> 
+
+    <main clasdss="container">
+        <div class="manga-grid">
+            <div class="manga-card">
+                <img src="../Média/Image/Img9.webp" alt="Img4">
+                <h3>Kaoru hana wa rin to saku</h3>
+                <button class="btn-action" onclick="toggleDetails('details-1')">VOIR </button>
+                <div id="details-1" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Voici le résumé passionnant de ce manga...</p>
+        
+                    <h4>Bande-annonce</h4>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        
+                    <button onclick="toggleDetails('details-1')">Fermer</button>
+                </div>
+        </div>
+        <div class="manga-card">
+                <img src="../Média/Image/Img10.jpg" alt="Img5">
+                <h3>The apothecary diaries</h3>
+                <button class="btn-action" onclick="toggleDetails('details-2')">VOIR </button>
+                <div id="details-2" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Voici le résumé passionnant de ce manga...</p>
+        
+                    <h4>Bande-annonce</h4>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        
+                    <button onclick="toggleDetails('details-2')">Fermer</button>
+                </div>
+        </div>
+        <div class="manga-card">
+                <img src="../Média/Image/Img11.jpg" alt="Img6">
+                <h3>From me to you</h3>
+                <button class="btn-action" onclick="toggleDetails('details-3')">VOIR </button>
+                <div id="details-3" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Voici le résumé passionnant de ce manga...</p>
+        
+                    <h4>Bande-annonce</h4>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        
+                    <button onclick="toggleDetails('details-3')">Fermer</button>
+                </div>
+        </div>
+        <div class="manga-card">
+                <img src="../Média/Image/Img12.jpg" alt="Img7">
+                <h3>Horimiya</h3>
+                <button class="btn-action" onclick="toggleDetails('details-4')">VOIR </button>
+                <div id="details-4" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Voici le résumé passionnant de ce manga...</p>
+        
+                    <h4>Bande-annonce</h4>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        
+                    <button onclick="toggleDetails('details-4')">Fermer</button>
+                </div>
+        </div>
+        <div class="manga-card">
+                <img src="../Média/Image/Img13.jpg" alt="Img8">
+                <h3>Kimisama kiss</h3>
+                <button class="btn-action" onclick="toggleDetails('details-5')">VOIR </button>
+                <div id="details-5" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Voici le résumé passionnant de ce manga...</p>
+        
+                    <h4>Bande-annonce</h4>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        
+                    <button onclick="toggleDetails('details-5')">Fermer</button>
+                </div>
+        </div>
+    </main>
+    <script src="script.js"></script>  
+</body>
+</html>
+
