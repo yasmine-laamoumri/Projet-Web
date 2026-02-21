@@ -191,6 +191,26 @@ body {
     line-height: 1.6;
 }
 
+/* On remplace ton ancien .hero-placeholder par celui-ci */
+.bibliotheque-content {
+    width: 100%;
+    height: 300px; /* Hauteur de ta bannière */
+    /* Remplace par le chemin de ton image d'en-tête */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                      url('../Média/Image/Img25.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #e67e22; /* Rappel de la couleur orange */
+}
+
+.bibliotheque-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 /* 2. Header (Navigation) */
 header {
     display: flex;
