@@ -29,16 +29,14 @@ body {
     line-height: 1.6;
 }
 
-/* Utilitaires pour le wireframe (les croix) */
-.placeholder-box, .placeholder-img, .placeholder-img-small {
-    border: 1px solid #ccc;
-    background: #f9f9f9;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+/* Supprime toute croix ou pseudo-élément ajouté par erreur */
+.placeholder-box::before,
+.placeholder-box::after,
+.placeholder-img::before,
+.placeholder-img::after,
+.placeholder-img-small::before,
+.placeholder-img-small::after {
+    content: none !important;
 }
 
 /* Création des diagonales (X) */
@@ -170,7 +168,13 @@ body {
     height: 30px;
     border: 1px solid #ccc;
 }
-
+.placeholder-box img,
+.placeholder-img-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /*bibliothèque 
 /* 1. Reset et Styles de bas*/
