@@ -86,7 +86,7 @@ header .container.nav {
     height: 350px; /* Hauteur de ta bannière */
     /* Remplace par le chemin de ton image d'en-tête */
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                      url('../Média/Image/fantaisie.jpg'); 
+                      url('../Média/Image/Img28.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
