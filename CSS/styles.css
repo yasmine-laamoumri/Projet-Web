@@ -289,9 +289,22 @@ h2 {
 
 .categories-grid {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 20px;
+    justify-content: center; /* Centre le groupe */
+    align-items: flex-start; /* Aligne les cercles par le haut */
+    gap: 40px;
+    flex-wrap: wrap; /* Passe à la ligne si pas de place */
+}
+
+.circle-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    flex-shrink: 0; /* Empêche le cercle de s'écraser */
 }
 
 .category-item {
@@ -559,7 +572,8 @@ body {
 .team-grid {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    align-items: flex-start;
+    gap: 80px; /* Espace entre les membres */
     margin-top: 30px;
 }
 
@@ -618,19 +632,20 @@ body {
 
 .manga-grid {
     display: grid;
-    /* Création automatique des colonnes selon la largeur */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    /* Aligne 4 colonnes sur grand écran, s'ajuste automatiquement sur petit écran */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    align-items: start; /* Aligne le haut des cartes */
     text-align: center;
 }
 
 .manga-card img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: 350px; /* Hauteur fixe pour l'alignement */
+    object-fit: cover; /* Recadre l'image sans la déformer */
     border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    display: block;
 }
 
 .manga-card img:hover {
