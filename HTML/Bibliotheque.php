@@ -26,9 +26,11 @@
     </header>
 
     <main>
-        <h1>Bibliothèque</h1>
-
-        <div class="hero-placeholder"></div>
+        <section class="bibliotheque">
+            <div class="bibliotheque-content">
+                <h1>Bibliothèque</h1>
+            </div>
+        </section>
 
         <h2>Manga</h2>
 
