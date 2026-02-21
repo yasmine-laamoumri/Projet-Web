@@ -1,9 +1,26 @@
-/* --- RESET --- */
+/* Reset de base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Média/Image/logo.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* règle la transparence */
+    z-index: -1;
+    opacity: 0.1;   /* très léger */
+    opacity: 0.3;   /* plus visible */
+
 }
 
 body {
@@ -12,132 +29,653 @@ body {
     line-height: 1.6;
 }
 
-/* --- STRUCTURE --- */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Utilitaires pour le wireframe (les croix) */
+.placeholder-box, .placeholder-img, .placeholder-img-small {
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-/* --- NAVIGATION --- */
-header {
-    background: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+/* Création des diagonales (X) */
+.placeholder-box::before, .placeholder-box::after,
+.placeholder-img::before, .placeholder-img::after,
+.placeholder-img-small::before, .placeholder-img-small::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: #ccc;
 }
+.placeholder-box::before, .placeholder-img::before, .placeholder-img-small::before { transform: rotate(15deg); }
+.placeholder-box::after, .placeholder-img::after, .placeholder-img-small::after { transform: rotate(-15deg); }
 
-.nav {
+/* Navigation */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee;
 }
 
-.nav-buttons {
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    width: 60px;
+    height: 25px;
+    border: 1px solid #999;
+    background: none;
+    margin-left: 10px;
+}
+
+/* Sections principales */
+.hero, .banner-click {
+    padding: 20px 50px;
+}
+
+.hero .placeholder-box { height: 250px; }
+.banner-click .placeholder-box { height: 120px; }
+
+.hero span, .banner-click span {
+    background: white;
+    padding: 5px 15px;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Blocs Newsletter alternés */
+.content-block {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+}
+
+.content-block.reverse { flex-direction: row-reverse; }
+
+.placeholder-img {
+    width: 300px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.text-side { flex: 1; }
+
+/* Boutons génériques */
+.small-btn {
+    width: 80px;
+    height: 25px;
+    border: 1px solid #999;
+    background: white;
+    margin-top: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Témoignages */
+.testimonials {
+    text-align: center;
+    padding: 50px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.placeholder-img-small {
+    width: 350px;
+    height: 200px;
+}
+
+.testimonial-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.sub-title { margin: 40px 0 20px; font-weight: bold; }
+
+.review-stars-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review span { font-size: 0.8rem; color: #777; }
+
+/* Footer Newsletter */
+.final-newsletter {
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid #eee;
+}
+
+.final-newsletter input {
+    display: block;
+    margin: 20px auto 10px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+
+/*bibliothèque 
+/* 1. Reset et Styles de bas*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* 2. Header (Navigation) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav ul {
     display: flex;
     list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* 3. Contenu Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #444;
+}
+
+/* Le grand rectangle avec la croix (Placeholder) */
+.hero-placeholder {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ccc;
+    margin-bottom: 30px;
+    position: relative;
+    background-color: #fff;
+}
+
+.hero-placeholder::before, .hero-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top right, transparent calc(50% - 1px), #ccc calc(50% - 1px), #ccc calc(50% + 1px), transparent calc(50% + 1px));
+}
+.hero-placeholder::after {
+    background: linear-gradient(to bottom right, transparent calc(50% - 1px), #ccc calc(50% - 1px), #ccc calc(50% + 1px), transparent calc(50% + 1px));
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* 4. Section Catégories */
+.categories-section {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.categories-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 
-.nav-buttons button {
-    padding: 8px 16px;
-    background: white;
-    border: 1px solid #333;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.nav-buttons button:hover {
-    background: #333;
-    color: white;
-}
-
-/* --- HERO SECTION --- */
-.hero {
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('../Média/Image/fantaisie.jpg') center/cover no-repeat;
+.circle-icon {
+   width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 2px solid #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    background-color: #f0f0f0;
+}
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
 }
 
-.hero-title {
-    color: white;
-    font-size: 3.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 10px 30px;
-    border-radius: 10px;
+.inner-icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+.inner-icon::after {
+    content: '⇄';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+    font-size: 16px;
 }
 
-/* --- GRILLE DE MANGAS --- */
+.category-name {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+
+/*CONTACTE
+
+/* Container principal */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left; /* Aligné à gauche comme sur l'image */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Formulaire */
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    font-size: 0.8rem;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: none;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 20px; /* Bouton arrondi comme sur l'image */
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Carré à droite */
+.contact-image-placeholder {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #333;
+    position: relative;
+}
+
+/* Croix dans le carré */
+.contact-image-placeholder::before, .contact-image-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top right, transparent 49.5%, #333 49.5%, #333 50.5%, transparent 50.5%);
+}
+.contact-image-placeholder::after {
+    background: linear-gradient(to bottom right, transparent 49.5%, #333 49.5%, #333 50.5%, transparent 50.5%);
+}
+
+/* Section du bas (Find us here) */
+.find-us-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #333;
+    margin-top: 20px;
+    position: relative;
+    /* On réutilise la même technique de croix */
+    background: 
+        linear-gradient(to top right, transparent 49.8%, #333 49.8%, #333 50.2%, transparent 50.2%),
+        linear-gradient(to bottom right, transparent 49.8%, #333 49.8%, #333 50.2%, transparent 50.2%);
+}
+
+
+
+/*A PROPOS
+
+/* Reset des marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.links a.active {
+    background-color: #ddd; /* Pour simuler la sélection grise sur l'image */
+    padding: 2px 5px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 1px solid #777;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Contenu */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.section-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    background-color: #eee; /* Simulation du surlignage de l'image */
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Grand rectangle barré */
+.main-placeholder {
+    width: 100%;
+    height: 220px;
+    border: 1px solid #888;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cross-line {
+    position: absolute;
+    width: 110%; /* Un peu plus large pour couvrir la diagonale */
+    height: 1px;
+    background-color: #888;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15.5deg); /* Angle approximatif */
+}
+
+.cross-line.rotate {
+    transform: translate(-50%, -50%) rotate(-15.5deg);
+}
+
+/* Team */
+.team-section {
+    margin-top: 80px;
+}
+
+.team-section h2 {
+    font-size: 24px;
+}
+
+.italic {
+    font-style: italic;
+    color: #666;
+    font-size: 13px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.circle-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.icon {
+    font-size: 20px;
+    color: #555;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.role {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.footer-note {
+    text-align: left;
+    margin-top: 60px;
+}
+
+
+
+.hero {
+    width: 100%;
+    height: 300px;
+    background: #e0e0e0 url('https://images.unsplash.com/photo-1613376023733-0d743d20719b?w=1200') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.hero h1 {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 40px;
+    border-radius: 8px;
+}
+
+
 .manga-grid {
     display: grid;
+    /* Création automatique des colonnes selon la largeur */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 20px 0 50px;
-}
-
-.manga-card {
-    background: white;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 15px;
+    gap: 40px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.manga-card:hover {
-    transform: translateY(-5px);
 }
 
 .manga-card img {
     width: 100%;
     height: 350px;
     object-fit: cover;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.manga-card img:hover {
+    transform: scale(1.02);
 }
 
 .manga-card h3 {
-    margin-bottom: 15px;
+    margin: 15px 0;
     font-size: 1.2rem;
 }
 
-/* --- BOUTONS ET DETAILS --- */
-.btn-action {
-    background-color: #e67e22;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
+.hero {
+    /* Chemin vers votre image */
+    background-image: url('../Média/Image/fantaisie.jpg'); 
+    
+    /* Centre l'image et évite qu'elle se répète */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Donne de la hauteur pour voir l'image */
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.Fantaisie {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
 .manga-details {
-    background: #fdfdfd;
+    background: #f9f9f9;
     padding: 15px;
-    border: 1px solid #ddd;
-    margin-top: 15px;
+    border-top: 2px solid #ddd;
+    margin-top: 10px;
     border-radius: 5px;
     text-align: left;
 }
 
-.manga-details h4 {
-    margin: 10px 0;
-    color: #e67e22;
-}
-
-.btn-close {
-    margin-top: 15px;
-    width: 100%;
-    padding: 5px;
-    background: #eee;
-    border: 1px solid #ccc;
-    cursor: pointer;
+.manga-details iframe {
+    margin-top: 10px;
+    border-radius: 8px;
 }
