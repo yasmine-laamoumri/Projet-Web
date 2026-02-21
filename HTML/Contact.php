@@ -15,10 +15,10 @@
         </div>
         <nav>
             <ul class="nav-buttons">
-                    <li><button onclick="window.location.href='Accueil.html'">Accueil</button></li>
-                    <li><button onclick="window.location.href='Bibliotheque.html'">Bibliothèque</button></li>
-                    <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
-                    <li><button onclick="window.location.href='A propos.html'">A propos</button></li>
+                    <li><button onclick="window.location.href='Accueil.php'">Accueil</button></li>
+                    <li><button onclick="window.location.href='Bibliotheque.php'">Bibliothèque</button></li>
+                    <li><button onclick="window.location.href='Contact.php'">Contact</button></li>
+                    <li><button onclick="window.location.href='A propos.php'">A propos</button></li>
             </ul>
         </nav>
     </header>
@@ -29,20 +29,20 @@
         <h1>Contact</h1>
 
     <div class="contact-content">
-        <form class="contact-form">
+        <form class="contact-form" action="traitement.php" method="POST">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" placeholder="saisir un message">
+                <input type="text" placeholder="saisir un message" required>
             </div>
 
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="saisir un message">
+                <input type="email" placeholder="saisir un message" required>
             </div>
 
             <div class="form-group">
                 <label>Subject</label>
-                <input type="text" placeholder="saisir un message">
+                <input type="text" placeholder="objet">
             </div>
 
             <div class="form-group">
