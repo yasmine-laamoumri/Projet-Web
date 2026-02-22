@@ -1,6 +1,9 @@
-/* ==========================================================================
-   STYLE DU HEADER (Correction Alignement)
-   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 body::before {
     content: "";
     position: fixed;
@@ -44,22 +47,21 @@ header .container.nav {
 
 /* 3. Style des boutons de navigation */
 .nav-buttons button {
-    background-color: #f8f9fa;
-    border: 1px solid #cccccc;
-    padding: 8px 15px;
-    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #333;
+    padding: 8px 20px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-/* Effet au survol des boutons */
-.nav-buttons button:hover {
-    background-color: #e67e22; /* Devient orange au survol */
-    color: white;
-    border-color: #e67e22;
+.btn.nav-buttons:hover {
+    background-color: #e0e0e0;
 }
+
 
 /* ==========================================================================
    STYLE DE LA GRILLE DE MANGAS (Pour que ce soit bien droit)
@@ -92,7 +94,7 @@ header .container.nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #e67e22; /* Rappel de la couleur orange */
+    
 }
 
 .hero h1 {
