@@ -50,13 +50,6 @@ body::before {
 }
 
 
-
-body {
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
-}
-
 /* Supprime toute croix  */
 .placeholder-box::before,
 .placeholder-box::after,
@@ -193,11 +186,7 @@ body {
 }
 
 /*bibliothèque */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
