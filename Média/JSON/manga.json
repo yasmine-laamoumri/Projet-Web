@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "title": "One Piece",
+        "author": "Eiichiro Oda",
+        "genre": "Action",
+        "synopsis": "Luffy, un jeune garçon élastique, part à la recherche du légendaire trésor One Piece pour devenir le roi des pirates."
+    },
+    {
+        "id": 2,
+        "title": "Naruto",
+        "author": "Masashi Kishimoto",
+        "genre": "Action",
+        "synopsis": "Naruto Uzumaki, un jeune ninja, aspire à devenir le Hokage de son village tout en luttant contre les forces obscures qui menacent sa paix."
+        
+    },
+    {
+        "id": 3,
+        "title": "Attack on Titan",
+        "author": "Hajime Isayama",
+        "genre": "Action",
+        "synopsis": "Dans un monde où l'humanité est menacée par des titans géants, Eren Yeager et ses amis rejoignent l'armée pour combattre ces créatures et découvrir la vérité derrière leur existence."
+    }
+
+]

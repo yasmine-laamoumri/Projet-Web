@@ -1,124 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Action</title>
-    <link rel="stylesheet" href="../css/styles2.css">
-    <script type="text/javascript">
-    function toggleDetails(id) {
-        const details = document.getElementById(id);
-        if (details.style.display === "none" || details.style.display === "") {
-            details.style.display = "block";
-        } else {
-            details.style.display = "none";
+    <link rel="stylesheet" href="../css/styles.css">
+    <script >
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
         }
-    }
-</script>
+    </script>
 </head>
+
 <body>
 
-    <header>
-        <div class="container nav">
-        <img src="../Média/Image/logo.jpeg" alt="logo" width="100">
-        
-
-        <ul class="nav-buttons">
+    <header class="navbar">
+        <div class="logo">
+            <img src="../Média/Image/logo.jpeg" alt="logo" width="60">
+        </div>
+        <nav>
+            <ul class="nav-buttons">
                     <li><button onclick="window.location.href='Accueil.html'">Accueil</button></li>
                     <li><button onclick="window.location.href='Bibliotheque.html'">Bibliothèque</button></li>
                     <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
                     <li><button onclick="window.location.href='A propos.html'">A propos</button></li>
-        </ul>
-        </div>
-    </header> 
+            </ul>
+        </nav>
+        
+    </header>
 
 
     <section class="hero">
         <div class="hero-content">
             <h1>Action</h1>
         </div>
-    </section> 
+    </section>
 
-    <main clasdss="container">
+    <main class="container">
         <div class="manga-grid">
             <div class="manga-card">
                 <img src="../Média/Image/Img20.jpg" alt="Img4">
-                <h3>Dragon Ball</h3>
+                <h2>Dragon Ball</h2>
                 <button class="btn-action" onclick="toggleDetails('details-1')">VOIR </button>
                 <div id="details-1" class="manga-details" style="display: none;">
                     <hr>
-                    <h4>Resume</h4>
-                    <p>Dragon Ball raconte les aventures de Son Goku, un guerrier surpuissant qui protège la Terre en repoussant des ennemis toujours plus redoutables et en dépassant sans cesse ses limites.</p>
-        
+                    <h3>Resume</h3>
+                    <p>Dragon Ball raconte les aventures de Son Goku, un guerrier surpuissant qui protège la Terre en
+                        repoussant des ennemis toujours plus redoutables et en dépassant sans cesse ses limites.</p>
+
                     <h4>Bande-annonce</h4>
-                    <iframe width="250" height="250" src="https://www.youtube.com/embed/QSOjj8Q_9b4?si=DSfNhBBy_5gfE_9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/QSOjj8Q_9b4?si=DSfNhBBy_5gfE_9E"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     <button onclick="toggleDetails('details-1')">Fermer</button>
                 </div>
-        </div>
-        <div class="manga-card">
+            </div>
+            <div class="manga-card">
                 <img src="../Média/Image/Img21.jpg" alt="Img5">
                 <h3>Naruto</h3>
                 <button class="btn-action" onclick="toggleDetails('details-2')">VOIR </button>
                 <div id="details-2" class="manga-details" style="display: none;">
                     <hr>
                     <h4>Résumé</h4>
-                    <p>Dans Naruto, un jeune ninja rejeté rêve de devenir Hokage pour gagner le respect de son village tout en affrontant de puissants ennemis et son propre destin.</p>
-        
+                    <p>Dans Naruto, un jeune ninja rejeté rêve de devenir Hokage pour gagner le respect de son village
+                        tout en affrontant de puissants ennemis et son propre destin.</p>
+
                     <h4>Bande-annonce</h4>
-                    <iframe width="250" height="250" src="https://www.youtube.com/embed/Br3uO96lNkw?si=rrdMeT2S81T5wFt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/Br3uO96lNkw?si=rrdMeT2S81T5wFt0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     <button onclick="toggleDetails('details-2')">Fermer</button>
                 </div>
-        </div>
-        <div class="manga-card">
+            </div>
+            <div class="manga-card">
                 <img src="../Média/Image/Img22.jpg" alt="Img6">
                 <h3>Jojo Bizarre Adventure</h3>
                 <button class="btn-action" onclick="toggleDetails('details-3')">VOIR </button>
                 <div id="details-3" class="manga-details" style="display: none;">
                     <hr>
                     <h4>Résumé</h4>
-                    <p>JoJo's Bizarre Adventure suit plusieurs générations de la famille Joestar qui affrontent des ennemis surnaturels à travers le monde grâce à leurs pouvoirs uniques appelés Stands.</p>
-        
+                    <p>JoJo's Bizarre Adventure suit plusieurs générations de la famille Joestar qui affrontent des
+                        ennemis surnaturels à travers le monde grâce à leurs pouvoirs uniques appelés Stands.</p>
+
                     <h4>Bande-annonce</h4>
-                    <iframe width="250" height="250" src="https://www.youtube.com/embed/x06zFQ85gT0?si=Hmq1er5nR7nI-uU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/x06zFQ85gT0?si=Hmq1er5nR7nI-uU3"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     <button onclick="toggleDetails('details-3')">Fermer</button>
                 </div>
-        </div>
-        <div class="manga-card">
+            </div>
+            <div class="manga-card">
                 <img src="../Média/Image/Img23.jpg" alt="Img7">
                 <h3>One Piece</h3>
                 <button class="btn-action" onclick="toggleDetails('details-4')">VOIR </button>
                 <div id="details-4" class="manga-details" style="display: none;">
                     <hr>
                     <h4>Résumé</h4>
-                    <p>One Piece suit Monkey D. Luffy et son équipage de pirates à la recherche du légendaire trésor One Piece afin de devenir le Roi des Pirates.</p>
-        
+                    <p>One Piece suit Monkey D. Luffy et son équipage de pirates à la recherche du légendaire trésor One
+                        Piece afin de devenir le Roi des Pirates.</p>
+
                     <h4>Bande-annonce</h4>
-                    <iframe width="250" height="250" src="https://www.youtube.com/embed/8emFHDYsWcs?si=PAo1rm9bFoFsp21u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/8emFHDYsWcs?si=PAo1rm9bFoFsp21u"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     <button onclick="toggleDetails('details-4')">Fermer</button>
                 </div>
-        </div>
-        <div class="manga-card">
+            </div>
+            <div class="manga-card">
                 <img src="../Média/Image/Img24.jpg" alt="Img8">
                 <h3>Attack on Titan</h3>
                 <button class="btn-action" onclick="toggleDetails('details-5')">VOIR </button>
                 <div id="details-5" class="manga-details" style="display: none;">
                     <hr>
                     <h4>Résumé</h4>
-                    <p>L'Attaque des Titans suit Eren et ses amis dans un monde ravagé par des Titans géants, où ils luttent pour la survie de l’humanité et découvrent de terribles secrets sur leur propre existence.</p>
-        
+                    <p>L'Attaque des Titans suit Eren et ses amis dans un monde ravagé par des Titans géants, où ils
+                        luttent pour la survie de l’humanité et découvrent de terribles secrets sur leur propre
+                        existence.</p>
+
                     <h4>Bande-annonce</h4>
-                    <iframe width="250" height="250" src="https://www.youtube.com/embed/CbvQKBaDUWI?si=GzJzQMk8h0gOjdXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/CbvQKBaDUWI?si=GzJzQMk8h0gOjdXk"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     <button onclick="toggleDetails('details-5')">Fermer</button>
                 </div>
+            </div>
+
+            <div class="manga-card">
+                <img src="../Média/Image/Img29.jpg" alt="Img8">
+                <h3>Jujutsu Kaisen</h3>
+                <button class="btn-action" onclick="toggleDetails('details-6')">VOIR </button>
+                <div id="details-6" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>Jujutsu Kaisen suit Yuji Itadori, un lycéen qui devient un sorcier après avoir mangé un pouvoir
+                        surnaturel, et il doit lutter contre des esprits maléfiques dans un monde où les sorciers
+                        combattent les créatures maléfiques.</p>
+
+                    <h4>Bande-annonce</h4>
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/Xr032EhUDPw?si=9eoqvoWtVWwC-E1B"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <button onclick="toggleDetails('details-6')">Fermer</button>
+                </div>
+            </div>
+            <div class="manga-card">
+                <img src="../Média/Image/Img30.jpg" alt="Img8">
+                <h3>One Punch Man</h3>
+                <button class="btn-action" onclick="toggleDetails('details-7')">VOIR </button>
+                <div id="details-7" class="manga-details" style="display: none;">
+                    <hr>
+                    <h4>Résumé</h4>
+                    <p>One Punch Man suit Saitama, un super-héros qui peut vaincre n'importe quel ennemi d'un seul coup,
+                        mais qui lutte contre l'ennui et la solitude de sa puissance.</p>
+
+                    <h4>Bande-annonce</h4>
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/atxYe-nOa9w?si=Gicknv9-lWXnJgIV"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <button onclick="toggleDetails('details-7')">Fermer</button>
+                </div>
+            </div>
+
         </div>
     </main>
     <script src="script.js"></script>
- 
-</body>
-</html>
 
+</body>
+
+</html>
