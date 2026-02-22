@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mon Site Manga</title>
-    
-    <link rel="stylesheet" href="../css/styles.css"> 
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Mon Site Manga</title>
+        <link rel="stylesheet" href="../css/styles.css"> 
+    </head>
+    <body>
 
-    <header>
-        <div class="logo">
-            <img src="../Média/Image/logo.jpeg" alt="logo" width="60">
-        </div>
-        <nav>
-            <ul class="nav-buttons">
-                    <li><button onclick="window.location.href='Accueil.html'">Accueil</button></li>
-                    <li><button onclick="window.location.href='Bibliotheque.html'">Bibliothèque</button></li>
-                    <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
-                    <li><button onclick="window.location.href='A propos.html'">A propos</button></li>
-            </ul>
-        </nav>
-    </header>
-
+        <header>
+            <div class="logo">
+                <img src="../Média/Image/logo.jpeg" alt="logo" width="60">
+            </div>
+            <nav>
+                <ul class="nav-buttons">
+                        <li><button onclick="window.location.href='Accueil.html'">Accueil</button></li>
+                        <li><button onclick="window.location.href='Bibliotheque.html'">Bibliothèque</button></li>
+                        <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
+                        <li><button onclick="window.location.href='A propos.html'">A propos</button></li>
+                </ul>
+            </nav>
+        </header>
 
 
-      <main class="contact-container">
-        <h1>Contact</h1>
 
-    <div class="contact-content">
-        <form class="contact-form">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" placeholder="saisir un message">
+        <main class="contact-container">
+                <h1>Contact</h1>
+
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="Name" placeholder="saisir un message" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="votre@email.com" required >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="sujet" placeholder="Objet de votre message">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" placeholder="saisir un message "></textarea>
+                    </div>
+
+                    <button type="submit" class="send-btn">Envoyer</button>
+                </form>
             </div>
 
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" placeholder="saisir un message">
+            <div class="find-us-section">
+                <h2>Find us here</h2>
+                <div class="hero-placeholder">
+                    <img src="../Média/Image/Img14.jpg" alt="Img4">
+                </div>
+
             </div>
 
-            <div class="form-group">
-                <label>Subject</label>
-                <input type="text" placeholder="objet">
-            </div>
+        </main>
 
-            <div class="form-group">
-                <label>Message</label>
-                <textarea placeholder="saisir un message "></textarea>
-            </div>
-
-            <button type="submit" class="send-btn">Envoyer</button>
-        </form>
-    </div>
-
-    <div class="find-us-section">
-        <h2>Find us here</h2>
-        <div class="hero-placeholder"></div>
-
-    </div>
-</main>
+        <script src="script.js"></script>  
+    </body>
+</html>
