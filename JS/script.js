@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const champs = [nom, email, sujet, message];
         let erreur = false;
 
-        // Vérification : si c'est vide, on met en rouge
+        
         champs.forEach(champ => {
             if (champ.value.trim() === "") {
                 champ.style.borderColor = "red";
