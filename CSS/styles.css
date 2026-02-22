@@ -88,7 +88,6 @@ body {
     background-position: center;
     justify-content: center;
     align-items: center;
-
 }   
 .hero span, .banner-click span {
     background: white;
@@ -153,16 +152,7 @@ body {
 
 .text-side { flex: 1; }
 
-/* Boutons génériques */
-.small-btn {
-    width: 80px;
-    height: 25px;
-    border: 1px solid #999;
-    background: white;
-    margin-top: 15px;
-    cursor: pointer;
-    z-index: 1;
-}
+
 
 /* Témoignages */
 .Manga {
@@ -171,20 +161,29 @@ body {
 }
 
 .testimonial-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crée 2 colonnes de taille égale */
+    gap: 20px;                             /* Espace entre les deux images */
+    justify-items: center;                 /* Centre les blocs horizontalement */
+    margin: 20px 0;
 }
 
-.placeholder-img-small {
-    width: 350px;
-    height: 200px;
+.placeholder-img-small img {
+    width: 100%;                           /* L'image s'adapte à la largeur du bloc */
+    height: auto;
+    border-radius: 5px;
 }
-
-.testimonial-item p {
+.testimonial-item {
+    width: 100%;                           /* Prend toute la largeur de sa colonne */
+    max-width: 400px;                      /* Évite que l'image devienne trop géante */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+}
+.testimonial-item li {
+    list-style: none;
     margin-top: 10px;
-    font-weight: bold;
 }
 
 .sub-title { margin: 40px 0 20px; font-weight: bold; }
